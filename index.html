@@ -5,29 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome to Probably Clear</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
-  <div id="navbar"></div>
-
-  <header class="hero-section">
-    <img src="logo.svg" alt="Probably Clear Logo" class="logo" />
-    <h1>Welcome to Probably Clear</h1>
-    <p>Clarity, Transparency, and Trust — Always.</p>
-    <a href="about.html" class="button">Learn More</a>
+  <header>
+    <h1>Probably Clear</h1>
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main></main>
+  <main>
+    <section class="hero-section">
+      <img src="logo-placeholder.png" alt="Logo" class="logo" />
+      <h1>Clarity Starts Here</h1>
+      <p>Your trusted source for transparency and results in every service we provide.</p>
+      <a href="services.html" class="button">Explore Services</a>
+    </section>
+
+    <h2>Welcome to Probably Clear</h2>
+    <p>At Probably Clear, we provide honest, efficient, and high-quality services tailored to meet the needs of individuals and businesses alike.</p>
+  </main>
 
   <footer>
     <p>&copy; 2025 Probably Clear</p>
   </footer>
 
   <script src="main.js"></script>
-  <script>
-    fetch('navbar.html')
-      .then(res => res.text())
-      .then(data => document.getElementById('navbar').innerHTML = data);
-  </script>
 </body>
 </html>
