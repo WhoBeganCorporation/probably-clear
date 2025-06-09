@@ -1,3 +1,6 @@
+body {
+  background-color: hotpink;
+}
 /* Base Reset */
 * {
   margin: 0;
