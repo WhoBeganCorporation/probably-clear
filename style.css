@@ -1,37 +1,110 @@
-body {
-  font-family: Arial, sans-serif;
+/* Base Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & Typography */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
-}
-header {
-  background-color: #0077cc;
-  color: white;
   padding: 1rem;
+}
+
+/* Header */
+header {
+  background-color: #ffffff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
   text-align: center;
 }
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: #0077cc;
+}
+
+/* Nav */
 nav ul {
   list-style: none;
-  padding: 0;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
-nav a {
-  color: white;
+
+nav ul li a {
   text-decoration: none;
+  color: #333;
   font-weight: bold;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
 }
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #0077cc;
+  border-bottom: 2px solid #0077cc;
+}
+
+/* Main */
 main {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
   padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
+
+/* Footer */
 footer {
-  background-color: #333;
-  color: white;
+  margin-top: 3rem;
   text-align: center;
   padding: 1rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  font-size: 0.875rem;
+  color: #777;
 }
+
+/* Image Styling */
+img.about-image {
+  border-radius: 8px;
+  margin-top: 1rem;
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #005fa3;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
+
