@@ -1,3 +1,6 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 /* Base Reset */
 * {
   margin: 0;
@@ -7,11 +10,11 @@
 
 /* Body & Typography */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 /* Header */
@@ -19,14 +22,16 @@ header {
   background-color: #ffffff;
   padding: 1rem 0;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  margin-bottom: 2rem;
-  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header h1 {
-  margin-bottom: 0.5rem;
+  text-align: center;
   font-size: 2rem;
   color: #0077cc;
+  margin-bottom: 0.5rem;
 }
 
 /* Nav */
@@ -36,75 +41,84 @@ nav ul {
   justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #333;
-  font-weight: bold;
+  font-weight: 600;
   padding: 0.5rem;
-  transition: color 0.3s ease;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
   color: #0077cc;
-  border-bottom: 2px solid #0077cc;
+  background-color: #e6f2fb;
 }
 
-/* Main */
+/* Main Content */
 main {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2rem auto;
   background: white;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
 /* Footer */
 footer {
-  margin-top: 3rem;
   text-align: center;
   padding: 1rem;
   font-size: 0.875rem;
   color: #777;
+  margin-top: 3rem;
 }
 
-/* Image Styling */
+/* Images */
 img.about-image {
-  border-radius: 8px;
-  margin-top: 1rem;
   width: 100%;
   max-height: 300px;
   object-fit: cover;
+  border-radius: 8px;
+  margin-top: 1rem;
 }
 
 /* Button */
 .button {
   display: inline-block;
+  margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   background-color: #0077cc;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 119, 204, 0.2);
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .button:hover {
   background-color: #005fa3;
+  transform: scale(1.03);
 }
 
 /* Responsive */
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
   }
 
   main {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
   }
 }
-
