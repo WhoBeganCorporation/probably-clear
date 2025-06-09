@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome to Probably Clear</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
-  <!-- Navigation bar will be dynamically loaded -->
   <div id="navbar"></div>
 
-  <main>
-    <h2>Welcome to Probably Clear</h2>
-    <p>Your trusted source for clarity and transparency in every service we provide.</p>
-  </main>
+  <header class="hero-section">
+    <img src="logo.svg" alt="Probably Clear Logo" class="logo" />
+    <h1>Welcome to Probably Clear</h1>
+    <p>Clarity, Transparency, and Trust — Always.</p>
+    <a href="about.html" class="button">Learn More</a>
+  </header>
+
+  <main></main>
 
   <footer>
     <p>&copy; 2025 Probably Clear</p>
@@ -21,7 +25,6 @@
 
   <script src="main.js"></script>
   <script>
-    // Load shared navbar
     fetch('navbar.html')
       .then(res => res.text())
       .then(data => document.getElementById('navbar').innerHTML = data);
