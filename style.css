@@ -106,21 +106,7 @@ img.about-image {
   transform: scale(1.03);
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  main {
-    padding: 1.5rem 1rem;
-  }
-
-  header h1 {
-    font-size: 1.5rem;
-  }
+/* Hero Section */
 .hero-section {
   text-align: center;
   padding: 6rem 2rem;
@@ -152,3 +138,19 @@ img.about-image {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Responsive */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  main {
+    padding: 1.5rem 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
