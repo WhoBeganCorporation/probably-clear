@@ -7,25 +7,25 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Probably Clear</h1>
-    <nav>
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Our Services</a></li>
-        <li><a href="team.html">Our Team</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Navigation bar will be dynamically loaded here -->
+  <div id="navbar"></div>
 
   <main>
-    <h2>Our Team</h2><p>Meet the team that brings clarity to your projects.</p>
+    <h2>Our Team</h2>
+    <p>Meet the team that brings clarity to your projects.</p>
   </main>
 
   <footer>
     <p>&copy; 2025 Probably Clear</p>
   </footer>
+
   <script src="js/main.js"></script>
+  <script>
+    // Load shared navigation
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+  </script>
 </body>
 </html>
+
